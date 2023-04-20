@@ -1,0 +1,243 @@
+!SESSION 2023-04-20 09:55:19.106 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_361
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.compare.win32 4 0 2023-04-20 09:55:20.850
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.compare.win32 [3]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=win32)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.jdt.launching.macosx 4 0 2023-04-20 09:55:20.852
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.macosx [19]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.jdt.launching.ui.macosx 4 0 2023-04-20 09:55:20.854
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.ui.macosx [20]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:55:23.014
+!MESSAGE 2023-04-20 09:55:23,010 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/studio.keys
+
+
+!ENTRY org.talend.platform.logging 2 0 2023-04-20 09:56:27.841
+!MESSAGE 2023-04-20 09:56:27,840 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:40.254
+!MESSAGE 2023-04-20 09:56:40,253 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /LEARNING_REGISTRY_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:40.256
+!MESSAGE 2023-04-20 09:56:40,255 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /LEARNING_REGISTRY_ROUTINES/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:40.257
+!MESSAGE 2023-04-20 09:56:40,257 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /LEARNING_REGISTRY_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:40.258
+!MESSAGE 2023-04-20 09:56:40,257 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /LEARNING_REGISTRY_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:41.168
+!MESSAGE 2023-04-20 09:56:41,167 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /LEARNING_REGISTRY_BEANS/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:41.168
+!MESSAGE 2023-04-20 09:56:41,168 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /LEARNING_REGISTRY_BEANS/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:41.170
+!MESSAGE 2023-04-20 09:56:41,169 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /LEARNING_REGISTRY_BEANS/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:41.170
+!MESSAGE 2023-04-20 09:56:41,170 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /LEARNING_REGISTRY_BEANS/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:43.394
+!MESSAGE 2023-04-20 09:56:43,394 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/LEARNING_REGISTRY_ROUTINES: org.example.learning_registry.code:routines:7.3.1 with classifier  to /LEARNING_REGISTRY_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:44.844
+!MESSAGE 2023-04-20 09:56:44,844 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - /home/joe/talend/code/learning-registry/LEARNING_REGISTRY/poms/code/routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:44.846
+!MESSAGE 2023-04-20 09:56:44,845 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 4 0 2023-04-20 09:56:48.531
+!MESSAGE 2023-04-20 09:56:48,530 ERROR org.talend.commons.exception.CommonExceptionHandler  - [ERROR] Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.5.1:install (default-install) on project routines: Failed to install artifact org.example.learning_registry.code:routines:jar:7.3.1: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/org/example/learning_registry/code/routines/7.3.1/routines-7.3.1.jar (Permission denied) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+
+!STACK 0
+java.lang.Exception: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.5.1:install (default-install) on project routines: Failed to install artifact org.example.learning_registry.code:routines:jar:7.3.1: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/org/example/learning_registry/code/routines/7.3.1/routines-7.3.1.jar (Permission denied) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+	at org.talend.designer.maven.launch.MavenCommandLauncher.execute(MavenCommandLauncher.java:321)
+	at org.talend.designer.maven.launch.MavenPomCommandLauncher.execute(MavenPomCommandLauncher.java:57)
+	at org.talend.designer.runprocess.java.TalendProcessJavaProject.mavenBuildCodeProjectPom(TalendProcessJavaProject.java:352)
+	at org.talend.designer.runprocess.java.TalendProcessJavaProject.buildModules(TalendProcessJavaProject.java:308)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.build(AggregatorPomsHelper.java:270)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.buildAndInstallCodesProject(AggregatorPomsHelper.java:257)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.updateCodeProject(AggregatorPomsHelper.java:186)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.access$0(AggregatorPomsHelper.java:182)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper$1.run(AggregatorPomsHelper.java:172)
+	at org.talend.repository.RepositoryWorkUnit.executeRun(RepositoryWorkUnit.java:99)
+	at org.talend.core.repository.model.AbstractRepositoryFactory.executeRepositoryWorkUnit(AbstractRepositoryFactory.java:258)
+	at org.talend.repository.localprovider.model.LocalRepositoryFactory.executeRepositoryWorkUnit(LocalRepositoryFactory.java:3553)
+	at org.talend.core.repository.model.ProxyRepositoryFactory.executeRepositoryWorkUnit(ProxyRepositoryFactory.java:2412)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.updateCodeProjects(AggregatorPomsHelper.java:179)
+	at org.talend.designer.runprocess.DefaultRunProcessService.initializeRootPoms(DefaultRunProcessService.java:861)
+	at org.talend.designer.runprocess.RunProcessService.initializeRootPoms(RunProcessService.java:483)
+	at org.talend.core.repository.model.ProxyRepositoryFactory.logOnProject(ProxyRepositoryFactory.java:2222)
+	at org.talend.repository.ui.login.LoginHelper$2.run(LoginHelper.java:577)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:48.672
+!MESSAGE 2023-04-20 09:56:48,672 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/LEARNING_REGISTRY_ROUTINES: org.example.learning_registry.code:routines:7.3.1 with classifier  to /LEARNING_REGISTRY_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:48.743
+!MESSAGE 2023-04-20 09:56:48,743 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - /home/joe/talend/code/learning-registry/LEARNING_REGISTRY/poms/code/beans
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:48.744
+!MESSAGE 2023-04-20 09:56:48,743 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 4 0 2023-04-20 09:56:51.564
+!MESSAGE 2023-04-20 09:56:51,563 ERROR org.talend.commons.exception.CommonExceptionHandler  - [ERROR] Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.5.1:install (default-install) on project beans: Failed to install artifact org.example.learning_registry.bean:beans:jar:7.3.1: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/org/example/learning_registry/bean/beans/7.3.1/beans-7.3.1.jar (Permission denied) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+
+!STACK 0
+java.lang.Exception: [ERROR] Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.5.1:install (default-install) on project beans: Failed to install artifact org.example.learning_registry.bean:beans:jar:7.3.1: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/org/example/learning_registry/bean/beans/7.3.1/beans-7.3.1.jar (Permission denied) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+	at org.talend.designer.maven.launch.MavenCommandLauncher.execute(MavenCommandLauncher.java:321)
+	at org.talend.designer.maven.launch.MavenPomCommandLauncher.execute(MavenPomCommandLauncher.java:57)
+	at org.talend.designer.runprocess.java.TalendProcessJavaProject.mavenBuildCodeProjectPom(TalendProcessJavaProject.java:352)
+	at org.talend.designer.runprocess.java.TalendProcessJavaProject.buildModules(TalendProcessJavaProject.java:308)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.build(AggregatorPomsHelper.java:270)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.buildAndInstallCodesProject(AggregatorPomsHelper.java:257)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.updateCodeProject(AggregatorPomsHelper.java:186)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.access$0(AggregatorPomsHelper.java:182)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper$1.run(AggregatorPomsHelper.java:174)
+	at org.talend.repository.RepositoryWorkUnit.executeRun(RepositoryWorkUnit.java:99)
+	at org.talend.core.repository.model.AbstractRepositoryFactory.executeRepositoryWorkUnit(AbstractRepositoryFactory.java:258)
+	at org.talend.repository.localprovider.model.LocalRepositoryFactory.executeRepositoryWorkUnit(LocalRepositoryFactory.java:3553)
+	at org.talend.core.repository.model.ProxyRepositoryFactory.executeRepositoryWorkUnit(ProxyRepositoryFactory.java:2412)
+	at org.talend.designer.maven.tools.AggregatorPomsHelper.updateCodeProjects(AggregatorPomsHelper.java:179)
+	at org.talend.designer.runprocess.DefaultRunProcessService.initializeRootPoms(DefaultRunProcessService.java:861)
+	at org.talend.designer.runprocess.RunProcessService.initializeRootPoms(RunProcessService.java:483)
+	at org.talend.core.repository.model.ProxyRepositoryFactory.logOnProject(ProxyRepositoryFactory.java:2222)
+	at org.talend.repository.ui.login.LoginHelper$2.run(LoginHelper.java:577)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:51.564
+!MESSAGE 2023-04-20 09:56:51,564 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - user@talend.com logged on learning-registry
+
+
+!ENTRY org.talend.platform.logging 1 0 2023-04-20 09:56:52.748
+!MESSAGE 2023-04-20 09:56:52,747 INFO  org.talend.core.repository.logintask.ReadOnlyProjectConfirm  - ReadOnly confirm
+
+
+!ENTRY org.talend.platform.logging 4 0 2023-04-20 09:57:01.307
+!MESSAGE 2023-04-20 09:57:01,305 ERROR org.talend.commons.exception.CommonExceptionHandler  - /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom (Permission denied)
+
+!STACK 0
+java.io.FileNotFoundException: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileWriter.<init>(FileWriter.java:107)
+	at org.talend.designer.maven.utils.PomUtil.savePom(PomUtil.java:163)
+	at org.talend.designer.maven.utils.PomUtil.removeAllDependenciesFromPom(PomUtil.java:1109)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.updatePomFileForJar(LocalLibraryManager.java:1056)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveStatusLocally(LocalLibraryManager.java:1003)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.checkModuleStatus(LocalLibraryManager.java:1078)
+	at org.talend.core.model.general.ModuleNeeded.getStatus(ModuleNeeded.java:318)
+	at org.talend.librariesmanager.model.ModulesNeededProvider.getUnistalledModulesNeeded(ModulesNeededProvider.java:1013)
+	at org.talend.updates.runtime.engine.factory.PluginOptionalMissingJarsExtraUpdatesFactory.retrieveUninstalledExtraFeatures(PluginOptionalMissingJarsExtraUpdatesFactory.java:57)
+	at org.talend.updates.runtime.engine.ExtraFeaturesUpdatesFactory.retrieveUninstalledExtraFeatures(ExtraFeaturesUpdatesFactory.java:61)
+	at org.talend.updates.runtime.ui.CheckExtraFeaturesToInstallJob.run(CheckExtraFeaturesToInstallJob.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.talend.platform.logging 4 0 2023-04-20 09:57:01.995
+!MESSAGE 2023-04-20 09:57:01,994 ERROR org.talend.commons.exception.CommonExceptionHandler  - /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.pom (Permission denied)
+
+!STACK 0
+java.io.FileNotFoundException: /home/joe/programs/talend/TOS_ESB-20200219_1130-V7.3.1/Studio/configuration/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.pom (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileWriter.<init>(FileWriter.java:107)
+	at org.talend.designer.maven.utils.PomUtil.savePom(PomUtil.java:163)
+	at org.talend.designer.maven.utils.PomUtil.removeAllDependenciesFromPom(PomUtil.java:1109)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.updatePomFileForJar(LocalLibraryManager.java:1056)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveStatusLocally(LocalLibraryManager.java:1003)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.checkModuleStatus(LocalLibraryManager.java:1078)
+	at org.talend.core.model.general.ModuleNeeded.getStatus(ModuleNeeded.java:318)
+	at org.talend.librariesmanager.model.ModulesNeededProvider.getUnistalledModulesNeeded(ModulesNeededProvider.java:1013)
+	at org.talend.updates.runtime.engine.factory.PluginOptionalMissingJarsExtraUpdatesFactory.retrieveUninstalledExtraFeatures(PluginOptionalMissingJarsExtraUpdatesFactory.java:57)
+	at org.talend.updates.runtime.engine.ExtraFeaturesUpdatesFactory.retrieveUninstalledExtraFeatures(ExtraFeaturesUpdatesFactory.java:61)
+	at org.talend.updates.runtime.ui.CheckExtraFeaturesToInstallJob.run(CheckExtraFeaturesToInstallJob.java:68)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

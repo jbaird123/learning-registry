@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_O8G-qWiuEeaVosv0LoDNZw" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_O8G-qmiuEeaVosv0LoDNZw" comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter xmi:id="_O8G-q2iuEeaVosv0LoDNZw" comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" type="id_String" value="465"/>
+    <contextParameter xmi:id="_O8G-rGiuEeaVosv0LoDNZw" comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G-rWiuEeaVosv0LoDNZw" comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter xmi:id="_O8G-rmiuEeaVosv0LoDNZw" comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter xmi:id="_O8G-r2iuEeaVosv0LoDNZw" comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter xmi:id="_O8G-sGiuEeaVosv0LoDNZw" comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="true" type="id_String" value="INFO"/>
+    <contextParameter xmi:id="_O8G-sWiuEeaVosv0LoDNZw" comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-smiuEeaVosv0LoDNZw" comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="false" type="id_String" value="c:/talendtemp"/>
+    <contextParameter xmi:id="_O8G-s2iuEeaVosv0LoDNZw" comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-tGiuEeaVosv0LoDNZw" comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" type="id_String" value="run successful"/>
+    <contextParameter xmi:id="_O8G-tWiuEeaVosv0LoDNZw" comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" type="id_String" value="FAILED"/>
+    <contextParameter xmi:id="_O8G-tmiuEeaVosv0LoDNZw" comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" type="id_String" value="Rejects"/>
+    <contextParameter xmi:id="_O8G-t2iuEeaVosv0LoDNZw" comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" type="id_String" value="NO FILES"/>
+    <contextParameter xmi:id="_O8G-uGiuEeaVosv0LoDNZw" comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-uWiuEeaVosv0LoDNZw" comment="" name="jobName" prompt="jobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-umiuEeaVosv0LoDNZw" comment="" name="projectName" prompt="projectName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-u2iuEeaVosv0LoDNZw" comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-vGiuEeaVosv0LoDNZw" comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" type="id_String" value="CONSOLE"/>
+    <contextParameter xmi:id="_O8G-vWiuEeaVosv0LoDNZw" comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:3/gltZhAqYk1U28dV0CP2H0hC/++ydpIc+oLEpGCcVi/av/KjPGJScvMYA=="/>
+    <contextParameter xmi:id="_O8G-vmiuEeaVosv0LoDNZw" comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G-v2iuEeaVosv0LoDNZw" comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-wGiuEeaVosv0LoDNZw" comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-wWiuEeaVosv0LoDNZw" comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter xmi:id="_fVS2sGiyEeaS6OmYRX3eCg" comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" type="id_String" value="logs"/>
+    <contextParameter xmi:id="_fVS2sWiyEeaS6OmYRX3eCg" comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" type="id_String" value="log.log"/>
+    <contextParameter xmi:id="_fVS2smiyEeaS6OmYRX3eCg" comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" type="id_String" value="error.log"/>
+    <contextParameter xmi:id="_k83jMGiyEeaS6OmYRX3eCg" comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" type="id_String" value="C:/learning_registry/go_open"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_O8G-wmiuEeaVosv0LoDNZw" confirmationNeeded="false" name="Dev">
+    <contextParameter xmi:id="_O8G-w2iuEeaVosv0LoDNZw" comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter xmi:id="_O8G-xGiuEeaVosv0LoDNZw" comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" type="id_String" value="465"/>
+    <contextParameter xmi:id="_O8G-xWiuEeaVosv0LoDNZw" comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G-xmiuEeaVosv0LoDNZw" comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter xmi:id="_O8G-x2iuEeaVosv0LoDNZw" comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter xmi:id="_O8G-yGiuEeaVosv0LoDNZw" comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter xmi:id="_O8G-yWiuEeaVosv0LoDNZw" comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" type="id_String" value="INFO"/>
+    <contextParameter xmi:id="_O8G-ymiuEeaVosv0LoDNZw" comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-y2iuEeaVosv0LoDNZw" comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" type="id_String" value="c:/talendtemp"/>
+    <contextParameter xmi:id="_O8G-zGiuEeaVosv0LoDNZw" comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-zWiuEeaVosv0LoDNZw" comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" type="id_String" value="run successful"/>
+    <contextParameter xmi:id="_O8G-zmiuEeaVosv0LoDNZw" comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" type="id_String" value="FAILED"/>
+    <contextParameter xmi:id="_O8G-z2iuEeaVosv0LoDNZw" comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" type="id_String" value="Rejects"/>
+    <contextParameter xmi:id="_O8G-0GiuEeaVosv0LoDNZw" comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" type="id_String" value="NO FILES"/>
+    <contextParameter xmi:id="_O8G-0WiuEeaVosv0LoDNZw" comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-0miuEeaVosv0LoDNZw" comment="" name="jobName" prompt="jobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-02iuEeaVosv0LoDNZw" comment="" name="projectName" prompt="projectName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-1GiuEeaVosv0LoDNZw" comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-1WiuEeaVosv0LoDNZw" comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" type="id_String" value="FILE"/>
+    <contextParameter xmi:id="_O8G-1miuEeaVosv0LoDNZw" comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:XsAw4SN9zPN3cNgiZ/lSQb7pHDIkkSN3cJJUU3qX7cvse+FW9p9CL3/AVA=="/>
+    <contextParameter xmi:id="_O8G-12iuEeaVosv0LoDNZw" comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G-2GiuEeaVosv0LoDNZw" comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-2WiuEeaVosv0LoDNZw" comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-2miuEeaVosv0LoDNZw" comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter xmi:id="_fVS2s2iyEeaS6OmYRX3eCg" comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" type="id_String" value="logs"/>
+    <contextParameter xmi:id="_fVS2tGiyEeaS6OmYRX3eCg" comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" type="id_String" value="log.log"/>
+    <contextParameter xmi:id="_fVS2tWiyEeaS6OmYRX3eCg" comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" type="id_String" value="error.log"/>
+    <contextParameter xmi:id="_k83jMWiyEeaS6OmYRX3eCg" comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" type="id_String" value="C:/learning_registry/go_open"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_O8G-22iuEeaVosv0LoDNZw" confirmationNeeded="false" name="Prod">
+    <contextParameter xmi:id="_O8G-3GiuEeaVosv0LoDNZw" comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter xmi:id="_O8G-3WiuEeaVosv0LoDNZw" comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" type="id_String" value="465"/>
+    <contextParameter xmi:id="_O8G-3miuEeaVosv0LoDNZw" comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G-32iuEeaVosv0LoDNZw" comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter xmi:id="_O8G-4GiuEeaVosv0LoDNZw" comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter xmi:id="_O8G-4WiuEeaVosv0LoDNZw" comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter xmi:id="_O8G-4miuEeaVosv0LoDNZw" comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" type="id_String" value="INFO"/>
+    <contextParameter xmi:id="_O8G-42iuEeaVosv0LoDNZw" comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-5GiuEeaVosv0LoDNZw" comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" type="id_String" value="/opt/talend/talendtemp"/>
+    <contextParameter xmi:id="_O8G-5WiuEeaVosv0LoDNZw" comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-5miuEeaVosv0LoDNZw" comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" type="id_String" value="run successful"/>
+    <contextParameter xmi:id="_O8G-52iuEeaVosv0LoDNZw" comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" type="id_String" value="FAILED"/>
+    <contextParameter xmi:id="_O8G-6GiuEeaVosv0LoDNZw" comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" type="id_String" value="Rejects"/>
+    <contextParameter xmi:id="_O8G-6WiuEeaVosv0LoDNZw" comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" type="id_String" value="NO FILES"/>
+    <contextParameter xmi:id="_O8G-6miuEeaVosv0LoDNZw" comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-62iuEeaVosv0LoDNZw" comment="" name="jobName" prompt="jobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-7GiuEeaVosv0LoDNZw" comment="" name="projectName" prompt="projectName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-7WiuEeaVosv0LoDNZw" comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-7miuEeaVosv0LoDNZw" comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" type="id_String" value="FILE"/>
+    <contextParameter xmi:id="_O8G-72iuEeaVosv0LoDNZw" comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:TSnCWPRNTxWYOil1JATnTXVyHq4roj/pA6bFPmADsdaipBeXuc8RYAVzQA=="/>
+    <contextParameter xmi:id="_O8G-8GiuEeaVosv0LoDNZw" comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G-8WiuEeaVosv0LoDNZw" comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-8miuEeaVosv0LoDNZw" comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-82iuEeaVosv0LoDNZw" comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter xmi:id="_fVS2tmiyEeaS6OmYRX3eCg" comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" type="id_String" value="logs"/>
+    <contextParameter xmi:id="_fVS2t2iyEeaS6OmYRX3eCg" comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" type="id_String" value="log.log"/>
+    <contextParameter xmi:id="_fVS2uGiyEeaS6OmYRX3eCg" comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" type="id_String" value="error.log"/>
+    <contextParameter xmi:id="_k83jMmiyEeaS6OmYRX3eCg" comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" type="id_String" value="/opt/talend/jobs/go_open_v1_v2"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_O8G-9GiuEeaVosv0LoDNZw" confirmationNeeded="false" name="Test">
+    <contextParameter xmi:id="_O8G-9WiuEeaVosv0LoDNZw" comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter xmi:id="_O8G-9miuEeaVosv0LoDNZw" comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" type="id_String" value="465"/>
+    <contextParameter xmi:id="_O8G-92iuEeaVosv0LoDNZw" comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G--GiuEeaVosv0LoDNZw" comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter xmi:id="_O8G--WiuEeaVosv0LoDNZw" comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter xmi:id="_O8G--miuEeaVosv0LoDNZw" comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter xmi:id="_O8G--2iuEeaVosv0LoDNZw" comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" type="id_String" value="INFO"/>
+    <contextParameter xmi:id="_O8G-_GiuEeaVosv0LoDNZw" comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-_WiuEeaVosv0LoDNZw" comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" type="id_String" value="c:/talendtemp"/>
+    <contextParameter xmi:id="_O8G-_miuEeaVosv0LoDNZw" comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G-_2iuEeaVosv0LoDNZw" comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" type="id_String" value="run successful"/>
+    <contextParameter xmi:id="_O8G_AGiuEeaVosv0LoDNZw" comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" type="id_String" value="FAILED"/>
+    <contextParameter xmi:id="_O8G_AWiuEeaVosv0LoDNZw" comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" type="id_String" value="Rejects"/>
+    <contextParameter xmi:id="_O8G_AmiuEeaVosv0LoDNZw" comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" type="id_String" value="NO FILES"/>
+    <contextParameter xmi:id="_O8G_A2iuEeaVosv0LoDNZw" comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G_BGiuEeaVosv0LoDNZw" comment="" name="jobName" prompt="jobName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G_BWiuEeaVosv0LoDNZw" comment="" name="projectName" prompt="projectName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G_BmiuEeaVosv0LoDNZw" comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G_B2iuEeaVosv0LoDNZw" comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" type="id_String" value="FILE"/>
+    <contextParameter xmi:id="_O8G_CGiuEeaVosv0LoDNZw" comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:0oKC0oR2eL62d0fJXJHOfeyVwQ0jUAPxpsUx2o0DSUwYTZDZsNTElK8qFQ=="/>
+    <contextParameter xmi:id="_O8G_CWiuEeaVosv0LoDNZw" comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter xmi:id="_O8G_CmiuEeaVosv0LoDNZw" comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G_C2iuEeaVosv0LoDNZw" comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_O8G_DGiuEeaVosv0LoDNZw" comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter xmi:id="_fVS2uWiyEeaS6OmYRX3eCg" comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" type="id_String" value="logs"/>
+    <contextParameter xmi:id="_fVS2umiyEeaS6OmYRX3eCg" comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" type="id_String" value="log.log"/>
+    <contextParameter xmi:id="_fVS2u2iyEeaS6OmYRX3eCg" comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" type="id_String" value="error.log"/>
+    <contextParameter xmi:id="_k83jM2iyEeaS6OmYRX3eCg" comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" type="id_String" value="C:/learning_registry/go_open"/>
+  </talendfile:ContextType>
+</xmi:XMI>

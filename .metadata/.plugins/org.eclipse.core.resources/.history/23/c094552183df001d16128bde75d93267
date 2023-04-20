@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_5AzpMWwAEea1F74drLnYBg" id="_5AzpMGwAEea1F74drLnYBg" label="Utils" creationDate="2016-08-26T22:49:36.323-0400" modificationDate="2016-09-04T21:45:34.181-0400" version="0.1" statusCode="" item="_5AzpM2wAEea1F74drLnYBg" displayName="Utils">
+    <author href="../../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_5AzpMmwAEea1F74drLnYBg" path="Core"/>
+  <TalendProperties:RoutineItem xmi:id="_5AzpM2wAEea1F74drLnYBg" property="_5AzpMWwAEea1F74drLnYBg" state="_5AzpMmwAEea1F74drLnYBg">
+    <content href="Utils_0.1.item#/"/>
+    <imports xmi:id="_Ka3cEG_BEeajrvpkG53aZw" mESSAGE="" mODULE="commons-validator-1.5.1.jar" nAME="Utils" rEQUIRED="true" urlPath="C:\Talend\jars\utils\commons-validator-1.5.1.jar"/>
+    <imports xmi:id="_2BetcHH3EeaW9-tRz9GRUQ" mESSAGE="" mODULE="httpclient-4.5.2.jar" nAME="Utils" rEQUIRED="true" urlPath="C:\Talend\jars\utils\httpclient-4.5.2.jar"/>
+    <imports xmi:id="_6gUQQHH3EeaW9-tRz9GRUQ" mESSAGE="" mODULE="commons-codec-1.9.jar" nAME="Utils" rEQUIRED="true" urlPath="C:\Talend\jars\utils\commons-codec-1.9.jar"/>
+    <imports xmi:id="_72TLwHH3EeaW9-tRz9GRUQ" mESSAGE="" mODULE="httpcore-4.4.4.jar" nAME="Utils" rEQUIRED="true" urlPath="C:\Talend\jars\utils\httpcore-4.4.4.jar"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

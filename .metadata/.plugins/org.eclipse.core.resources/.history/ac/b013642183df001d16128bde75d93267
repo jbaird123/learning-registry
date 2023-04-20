@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_LoeSkArqEeWSFvnQnHLKvA" id="_LobPQArqEeWSFvnQnHLKvA" label="CoreEmailStatusSend" creationDate="2015-06-04T14:47:42.392-0400" modificationDate="2016-09-16T09:16:08.851-0400" version="0.1" statusCode="" item="_LoeSkgrqEeWSFvnQnHLKvA" displayName="CoreEmailStatusSend">
+    <author href="../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_O8_vYWiuEeaVosv0LoDNZw" path="Core_Jobs"/>
+  <TalendProperties:ProcessItem xmi:id="_LoeSkgrqEeWSFvnQnHLKvA" property="_LoeSkArqEeWSFvnQnHLKvA" state="_O8_vYWiuEeaVosv0LoDNZw">
+    <process href="CoreEmailStatusSend_0.1.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>

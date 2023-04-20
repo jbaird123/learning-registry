@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_peAPQGi2Eea4iY2rWyEOUg" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_peAPQWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+    <contextParameter xmi:id="_peAPQmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_peAPQ2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_peAPRGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_peAPRWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_peAPRmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" type="id_String" value="learn_reg_dev"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_peAPR2i2Eea4iY2rWyEOUg" confirmationNeeded="false" name="Dev">
+    <contextParameter xmi:id="_peAPSGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+    <contextParameter xmi:id="_peAPSWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_peAPSmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_peAPS2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_peAPTGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_peAPTWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" type="id_String" value="learn_reg_dev"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_peAPTmi2Eea4iY2rWyEOUg" confirmationNeeded="false" name="Prod">
+    <contextParameter xmi:id="_peAPT2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_peAPUGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_peAPUWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" type="id_String" value="learnreg"/>
+    <contextParameter xmi:id="_peAPUmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_peAPU2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_peAPVGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" type="id_String" value="learnreg"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_peAPVWi2Eea4iY2rWyEOUg" confirmationNeeded="false" name="QA">
+    <contextParameter xmi:id="_peAPVmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+    <contextParameter xmi:id="_peAPV2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_peAPWGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_peAPWWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_peAPWmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_peAPW2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" type="id_String" value="learn_reg_dev"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_peAPXGi2Eea4iY2rWyEOUg" confirmationNeeded="false" name="Test">
+    <contextParameter xmi:id="_peAPXWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" type="id_Password" value="CNlsM2hQx/yKsFREJf9l+Q=="/>
+    <contextParameter xmi:id="_peAPXmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_peAPX2i2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_peAPYGi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_peAPYWi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_peAPYmi2Eea4iY2rWyEOUg" comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" type="id_String" value="learn_reg_dev"/>
+  </talendfile:ContextType>
+</xmi:XMI>

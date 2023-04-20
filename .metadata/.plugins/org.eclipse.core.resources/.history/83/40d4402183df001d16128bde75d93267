@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_rZhK0XA3EeajrvpkG53aZw" id="_rZhK0HA3EeajrvpkG53aZw" label="RejectLogging" creationDate="2016-09-01T07:31:51.933-0400" modificationDate="2016-09-10T09:34:56.647-0400" version="0.1" statusCode="" item="_rZhK03A3EeajrvpkG53aZw" displayName="RejectLogging">
+    <author href="../../../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_rZhK0nA3EeajrvpkG53aZw" path="LearningRegistryV2/errorHandling"/>
+  <TalendProperties:RoutineItem xmi:id="_rZhK03A3EeajrvpkG53aZw" property="_rZhK0XA3EeajrvpkG53aZw" state="_rZhK0nA3EeajrvpkG53aZw">
+    <content href="RejectLogging_0.1.item#/"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

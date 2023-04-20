@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_Qa_zAPaJEeSln49vYeyVYg" id="_Qa2pEPaJEeSln49vYeyVYg" label="Rejects" creationDate="2015-05-09T16:23:30.096-0400" modificationDate="2016-06-03T07:12:19.819-0400" version="0.1" statusCode="" item="_Qa_zAvaJEeSln49vYeyVYg" displayName="Rejects">
+    <author href="../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_O8s0c2iuEeaVosv0LoDNZw" path=""/>
+  <TalendProperties:RoutineItem xmi:id="_Qa_zAvaJEeSln49vYeyVYg" property="_Qa_zAPaJEeSln49vYeyVYg" state="_O8s0c2iuEeaVosv0LoDNZw">
+    <content href="Rejects_0.1.item#/"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

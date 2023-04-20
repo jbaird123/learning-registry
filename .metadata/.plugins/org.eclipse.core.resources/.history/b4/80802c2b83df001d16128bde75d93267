@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="c:/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="CONSOLE"/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="enc:system.encryption.key.v1:mX+H0VPOf6XBjics6ZPlnsmEEzcFvqxfyzNrbG1HNarf8rSmNKGqV5HpFQ=="/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="C:/learning_registry/go_open"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_Password" value="enc:system.encryption.key.v1:YjgMHhKy2fEkps5B2WWx6TUUvRjVwuSbat8YAlp7GeHIKTSN"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="learn_reg_dev"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value=""/>
+    <contextParameter comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="5432"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="fromDateTime" prompt="fromDateTime?" promptNeeded="false" type="id_String" value="2000-08-23T01:09:41Z"/>
+    <contextParameter comment="" name="untilDateTime" prompt="untilDateTime?" promptNeeded="false" type="id_String" value="2016-09-11T04:44:44Z"/>
+    <contextParameter comment="" name="testModeBatchLimit" prompt="testModeBatchLimit?" promptNeeded="false" type="id_Integer" value="10"/>
+    <contextParameter comment="" name="testModeFlag" prompt="testModeFlag?" promptNeeded="false" type="id_String" value="N"/>
+  </context>
+  <context confirmationNeeded="false" name="Prod">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="/opt/talend/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FILE"/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="enc:system.encryption.key.v1:rxlTtf0KYJILoXhsefF9KdFVU0BeBDUrc2QWWTCctg/5jBvtoASjTdFzYQ=="/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="/opt/talend/jobs/go_open_v1_v2"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_Password" value=""/>
+    <contextParameter comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="learnreg"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value=""/>
+    <contextParameter comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="5432"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="learnreg"/>
+    <contextParameter comment="" name="fromDateTime" prompt="fromDateTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="untilDateTime" prompt="untilDateTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="testModeBatchLimit" prompt="testModeBatchLimit?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="testModeFlag" prompt="testModeFlag?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="Dev">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="c:/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FILE"/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="enc:system.encryption.key.v1:3j3naVSBx4GNoblXAUWgQLgBx7PLRr0uH6LMBunfWOjSSceD0N/tUenthg=="/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="C:/learning_registry/go_open"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_Password" value="enc:system.encryption.key.v1:OGr10WmTi+l4qmeWzFFQuyEx/mn1dcEdwHVv3gkwEFOWyn5a"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="learn_reg_dev"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value=""/>
+    <contextParameter comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="5432"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="fromDateTime" prompt="fromDateTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="untilDateTime" prompt="untilDateTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="testModeBatchLimit" prompt="testModeBatchLimit?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="testModeFlag" prompt="testModeFlag?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <context confirmationNeeded="false" name="Test">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="c:/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FILE"/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="enc:system.encryption.key.v1:lJJppJkDbDqzpOWk3Uy7Sm4PFbDqXr+J66CT0gAUCHpUPxUZWGir6LATXw=="/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="C:/learning_registry/go_open"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Password" prompt="db_learning_registry_staging_Password?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_Password" value="enc:system.encryption.key.v1:EvYJ554io7chRCb1lXmBjtkPemaDKdh1U3x5sfoHDjA9Q3KJ"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Database" prompt="db_learning_registry_staging_Database?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="learn_reg_dev"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Schema" prompt="db_learning_registry_staging_Schema?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value=""/>
+    <contextParameter comment="" name="db_learning_registry_staging_Port" prompt="db_learning_registry_staging_Port?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="5432"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Server" prompt="db_learning_registry_staging_Server?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="db_learning_registry_staging_Login" prompt="db_learning_registry_staging_Login?" promptNeeded="false" repositoryContextId="_pd3FUGi2Eea4iY2rWyEOUg" type="id_String" value="postgres"/>
+    <contextParameter comment="" name="fromDateTime" prompt="fromDateTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="untilDateTime" prompt="untilDateTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="testModeBatchLimit" prompt="testModeBatchLimit?" promptNeeded="false" type="id_Integer" value=""/>
+    <contextParameter comment="" name="testModeFlag" prompt="testModeFlag?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="128" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="480" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:0YwwMcX0VYhFCs3jbRlPO89B1P6+vpaeu7zI+Qjq" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Talend/TOS_DI-20160704_1411-V6.2.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:judjfX2zb62XER7oDbgEIre/3ScloJF8Dir046x2" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_D5ipAGiuEeaVosv0LoDNZw" name="DataOperation"/>
+    <routinesParameter id="_D51j8GiuEeaVosv0LoDNZw" name="Mathematical"/>
+    <routinesParameter id="_D51j9GiuEeaVosv0LoDNZw" name="Numeric"/>
+    <routinesParameter id="_D5_U8GiuEeaVosv0LoDNZw" name="Relational"/>
+    <routinesParameter id="_D5_U9GiuEeaVosv0LoDNZw" name="StringHandling"/>
+    <routinesParameter id="_D5_U-GiuEeaVosv0LoDNZw" name="TalendDataGenerator"/>
+    <routinesParameter id="_D6Ie4GiuEeaVosv0LoDNZw" name="TalendDate"/>
+    <routinesParameter id="_D6Ie5GiuEeaVosv0LoDNZw" name="TalendString"/>
+    <routinesParameter id="_HaJQsF7kEeazANoknfXOQg" name="Author"/>
+    <routinesParameter id="_MLZjwF7lEeazANoknfXOQg" name="DemoLRJSON"/>
+    <routinesParameter id="_PtJBoF7kEeazANoknfXOQg" name="DigitalSignature"/>
+    <routinesParameter id="_VwpcMF7kEeazANoknfXOQg" name="EducationalAlignment"/>
+    <routinesParameter id="_ZRxZkF7kEeazANoknfXOQg" name="Identity"/>
+    <routinesParameter id="_GlFyEGDTEea7UvUZ93Alew" name="LearningRegistryItemContext"/>
+    <routinesParameter id="_yKtY8F6rEeaGKeAPBz_hSA" name="LearningRegistryItem"/>
+    <routinesParameter id="_csZtYF7kEeazANoknfXOQg" name="Publisher"/>
+    <routinesParameter id="_gZXuYF7kEeazANoknfXOQg" name="RegistryMetadata"/>
+    <routinesParameter id="_jPr0MF7kEeazANoknfXOQg" name="TOS"/>
+    <routinesParameter id="_mrnIgF7kEeazANoknfXOQg" name="URL"/>
+    <routinesParameter id="_YpIBwAUsEd-xxMPzjK47rQ" name="CoreLogs"/>
+    <routinesParameter id="_XpeGMFDKEeG53OpvTfJl5A" name="CoreProcessing"/>
+    <routinesParameter id="_Kt5DAGFREeGRqL7QZXDUXw" name="CoreUtilities"/>
+    <routinesParameter id="_nnjAgGRvEeaUMsJltFQ-Ug" name="JsonUtilities"/>
+    <routinesParameter id="_Qa2pEPaJEeSln49vYeyVYg" name="Rejects"/>
+    <routinesParameter id="_1Ug0YFvrEeaVjbJ5DpgNEA" name="ISO8601DateHandling"/>
+  </parameters>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="32" posY="-352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="CoreLogs.infoMsg(&quot;Beginning Job: &quot; + projectName + &quot; / &quot; + jobName);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Logging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogCatcher_1" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_JAVA_EXCEPTION" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_TDIE" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_TWARN" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_TACTIONFAILURE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogCatcher_1">
+      <column defaultValue="" key="false" length="0" name="moment" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="root_pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="20" name="father_pid" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="project" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="job" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="50" name="context" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="priority" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="type" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="origin" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="message" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="3" name="code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="CoreLogs.errorMsg(input_row.message);&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1"/>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_GjTOoGiwEeaS6OmYRX3eCg" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.db_learning_registry_staging_Server" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.db_learning_registry_staging_Port" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.db_learning_registry_staging_Database" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.db_learning_registry_staging_Schema" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.db_learning_registry_staging_Login" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:PSA+rE0asZXSS4x4UjUu1Q3BYhKLjGYnkQhZqOTHftBs7T2L+0Pk3MHONNfo6lQ2hHTNalz9Gd4YN6SX0J+WTK3pYiImHDZRJg==" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;select parameter_value&#xD;&#xA;from system_parameters&#xD;&#xA;where parameter_name='go_open_lrt'&#xD;&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="parameter_value"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="get_last_successful_run_start_time"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_2">
+      <column comment="" key="false" length="2147483647" name="parameter_value" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_3" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="if ((input_row.parameter_value==null)||(input_row.parameter_value.equals(&quot;&quot;))){&#xA;&#x9;globalMap.put(&quot;lastSuccessfulRunStartDateTime&quot;, &quot;2000-01-01T00:00:00Z&quot;);&#xA;} else {&#xA;&#x9;globalMap.put(&quot;lastSuccessfulRunStartDateTime&quot;, input_row.parameter_value);&#xA;}&#xA;&#xA;String fromDateTime;&#xA;String untilDateTime;&#xA;&#xA;&#xA;if ((context.fromDateTime==null) || (context.fromDateTime.equals(&quot;&quot;))) {&#xA;&#x9;fromDateTime=((String)globalMap.get(&quot;lastSuccessfulRunStartDateTime&quot;));&#xA;} else {&#xA;&#x9;fromDateTime=context.fromDateTime;&#xA;}&#xA;&#xA;&#xA;if ((context.untilDateTime==null) || (context.untilDateTime.equals(&quot;&quot;))) {&#xA;&#x9;untilDateTime=ISO8601DateHandling.getCurrentDateTimeInISOFormat();&#xA;} else {&#xA;&#x9;untilDateTime=context.untilDateTime;&#xA;}&#xA;&#xA;globalMap.put(&quot;fromDateTime&quot;,fromDateTime);&#xA;globalMap.put(&quot;untilDateTime&quot;,untilDateTime);&#xA;&#xA;CoreLogs.infoMsg(&quot;Downloading records from: &quot; + ((String)globalMap.get(&quot;fromDateTime&quot;)));&#xA;CoreLogs.infoMsg(&quot;Downloading records until: &quot; + ((String)globalMap.get(&quot;untilDateTime&quot;)));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Set Start and End Dates"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_3"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String baseUrl = &quot;https://goopen.public.learningregistry.net/harvest/listrecords&quot;;&#xA;String parameterList = &quot;&quot;;&#xA;&#xA;&#xA;// set global value for parameter prefix&#xA;globalMap.put(&quot;parameterPrefix&quot;, &quot;?&quot;);&#xA;&#xA;String fromDateTime  = (String)globalMap.get(&quot;fromDateTime&quot;);&#xA;String untilDateTime = (String)globalMap.get(&quot;untilDateTime&quot;);&#xA;&#xA;&#xA;if ((fromDateTime!=null) &amp;&amp; (!fromDateTime.equals(&quot;&quot;))) {&#xA;&#x9;&#x9;parameterList += ((String)globalMap.get(&quot;parameterPrefix&quot;)) + &quot;from=&quot;+fromDateTime;&#xA;&#x9;&#x9;globalMap.put(&quot;parameterPrefix&quot;, &quot;&amp;&quot;);&#xA;}&#xA;&#xA;if ((untilDateTime!=null) &amp;&amp; (!untilDateTime.equals(&quot;&quot;))) {&#xA;&#x9;&#x9;parameterList += ((String)globalMap.get(&quot;parameterPrefix&quot;)) + &quot;until=&quot;+untilDateTime;&#xA;&#x9;&#x9;globalMap.put(&quot;parameterPrefix&quot;, &quot;&amp;&quot;);&#xA;}&#xA;&#xA;&#xA;&#xA;globalMap.put(&quot;fullUrl&quot;,baseUrl + parameterList);&#xA;&#xA;CoreLogs.infoMsg(&quot;Full URL: &quot; + ((String)globalMap.get(&quot;fullUrl&quot;)));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Set Base URL"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;exitFlag&quot;,false);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Set exitFlag to false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_4"/>
+  </node>
+  <node componentName="tLoop" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="RADIO" name="FORLOOP" value="false"/>
+    <elementParameter field="RADIO" name="WHILELOOP" value="true"/>
+    <elementParameter field="TEXT" name="FROM" value="1" show="false"/>
+    <elementParameter field="TEXT" name="TO" value="10" show="false"/>
+    <elementParameter field="TEXT" name="STEP" value="1" show="false"/>
+    <elementParameter field="CHECK" name="INCREASE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="DECLARATION" value="int i=0"/>
+    <elementParameter field="TEXT" name="CONDITION" value="((boolean)globalMap.get(&quot;exitFlag&quot;))==false"/>
+    <elementParameter field="TEXT" name="ITERATION" value="i++"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_5" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;status&quot;, &quot;SUCCESS&quot;);&#xA;&#xA;String currentUrl = ((String)globalMap.get(&quot;fullUrl&quot;));&#xA;&#xA;&#xA;String resumptionToken=((String)globalMap.get(&quot;resumtionToken&quot;));&#xA;&#xA;if ((resumptionToken!=null) &amp;&amp; (!resumptionToken.equals(&quot;&quot;))) {&#xA;&#x9;&#x9;currentUrl += ((String)globalMap.get(&quot;parameterPrefix&quot;)) + &quot;resumption_token=&quot;+resumptionToken;&#xA;&#x9;&#x9;globalMap.put(&quot;parameterPrefix&quot;,&quot;&amp;&quot;);&#xA;}&#xA;&#xA;globalMap.put(&quot;currentUrl&quot;, currentUrl);&#xA;&#xA;//update batchCounter&#xA;int batchCounter=((Integer)globalMap.get(&quot;batchCounter&quot;));&#xA;batchCounter = ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_ITERATION&quot;));&#xA;globalMap.put(&quot;batchCounter&quot;,batchCounter);&#xA;&#xA;&#xA;CoreLogs.infoMsg(&quot;Downloading batch #: &quot; + ((Integer)globalMap.get(&quot;tLoop_1_CURRENT_ITERATION&quot;)));&#xA;&#xA;//for running in test mode&#xA;if ((context.testModeFlag!=null) &amp;&amp; (context.testModeFlag.equalsIgnoreCase(&quot;Y&quot;)) ) {&#xA;&#x9;if (((Integer)globalMap.get(&quot;batchCounter&quot;)) >= context.testModeBatchLimit) {&#xA;&#x9;&#x9;globalMap.put(&quot;exitFlag&quot;, true);&#xA;&#x9;&#x9;CoreLogs.infoMsg(&quot;Running in test mode.  The limit of &quot; + context.testModeBatchLimit + &quot; batches was downloaded. Exiting after this batch...&quot; );&#xA;&#x9;}&#xA;}&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="SetLoopValues - logging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_5"/>
+  </node>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="((String)globalMap.get(&quot;currentUrl&quot;))"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/xml" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/json"/>
+    <elementParameter field="TABLE" name="QUERY"/>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC" show="false"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="enc:system.encryption.key.v1:TwdZhXbCA4+rEQ1PIhaEwkFf920emLaEzkygslSQWN13VbXTm+Q=" show="false"/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROLE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" value="false" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="false"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="false" show="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="false"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="true"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="8080" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="enc:system.encryption.key.v1:EHBmm2LmoaTYGziv/gF0/veQpq3wuV/T/4JgNNom" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTClient_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_4" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;currentDocumentString&quot;,input_row.string);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_4"/>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="672">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_5" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;status&quot;,&quot;FAILED&quot;);&#xA;&#xA;System.out.println(&quot;errorCode: &quot; + input_row.errorCode);&#xA;System.out.println(&quot;errorMessage: &quot; + input_row.errorMessage);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_5"/>
+  </node>
+  <node componentName="tDie" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="672">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="TEXT" name="MESSAGE" value="&quot;the end is near&quot;"/>
+    <elementParameter field="TEXT" name="CODE" value="4"/>
+    <elementParameter field="CLOSED_LIST" name="PRIORITY" value="5"/>
+    <elementParameter field="CHECK" name="EXIT_JVM" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDie_1"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="currentDocumentString"/>
+      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;currentDocumentString&quot;)"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="currentDocumentString"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="currentDocumentString" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="currentDocumentString"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/bills/bill/line&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="OK"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="responseDate"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="error"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resumption_token"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="OK"/>
+      <elementValue elementRef="QUERY" value="&quot;OK&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="responseDate"/>
+      <elementValue elementRef="QUERY" value="&quot;responseDate&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="error"/>
+      <elementValue elementRef="QUERY" value="&quot;error&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resumption_token"/>
+      <elementValue elementRef="QUERY" value="&quot;resumption_token&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" value="false"/>
+    <metadata connector="FLOW" name="tExtractJSONFields_1">
+      <column comment="" key="false" length="-1" name="OK" nullable="true" precision="-1" sourceType="id_Boolean" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="responseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error" nullable="true" precision="-1" sourceType="id_String" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resumption_token" nullable="true" precision="-1" sourceType="id_String" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="OK" nullable="true" precision="-1" sourceType="id_Boolean" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="responseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error" nullable="true" precision="-1" sourceType="id_String" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resumption_token" nullable="true" precision="-1" sourceType="id_String" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_6" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#xA;globalMap.put(&quot;resumtionToken&quot;,input_row.resumption_token);&#xA;&#xA;&#xA;if ((input_row.resumption_token==null) || (input_row.resumption_token.equals(&quot;&quot;)) || (input_row.resumption_token.equals(&quot;null&quot;))) {&#xA;&#x9;globalMap.put(&quot;exitFlag&quot;, true);&#xA;}&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="SetExitFlag if needed"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out2" name="tJavaRow_6">
+      <column comment="" key="false" length="-1" name="OK" nullable="true" precision="-1" sourceType="id_Boolean" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="responseDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="id_Date" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error" nullable="true" precision="-1" sourceType="id_String" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resumption_token" nullable="true" precision="-1" sourceType="id_String" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_4" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="parameter_name"/>
+      <elementValue elementRef="VALUE" value="&quot;go_open_lrt&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="parameter_value"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;untilDateTime&quot;))"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Set Last Run Time Values"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_4">
+      <column comment="" key="true" length="-1" name="parameter_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="parameter_value" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:56PrrTQxZRyK0KNB9y4cynyXCRRkkreP9c5KbF/3" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;system_parameters&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="parameter_name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="parameter_value"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="system_parameters"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlOutput_2">
+      <column comment="" key="true" length="-1" name="parameter_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="parameter_value" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="-1" name="parameter_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="parameter_value" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlCommit_2" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlCommit_2"/>
+  </node>
+  <node componentName="tPostgresqlRollback" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRollback_2" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlRollback_2"/>
+  </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="-224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_GjTOoGiwEeaS6OmYRX3eCg" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="context.db_learning_registry_staging_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.db_learning_registry_staging_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.db_learning_registry_staging_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.db_learning_registry_staging_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.db_learning_registry_staging_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:prfDHPgjTx10TW0ga07laQ7bGWjInTEYyxQA/b7JYeoydX3cTafFuTqUMSMfzM0sH1fpWcFgGOW6QiIE1N6Un90aXZIUHxdOgg=="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="LearningRegistryStaging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_2" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="currentDocumentString"/>
+      <elementValue elementRef="VALUE" value="(String)globalMap.get(&quot;currentDocumentString&quot;)"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="currentDocumentString"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="-1" name="currentDocumentString" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="currentDocumentString"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/bills/bill/line&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.listrecords[*].record&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="identifier"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="original_json"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resource_data_json"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="identifier"/>
+      <elementValue elementRef="QUERY" value="&quot;header.identifier&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="original_json"/>
+      <elementValue elementRef="QUERY" value="&quot;@&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resource_data_json"/>
+      <elementValue elementRef="QUERY" value="&quot;@.resource_data.resource_data&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_2" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="ExtractHeader"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" value="false"/>
+    <metadata connector="FLOW" name="tExtractJSONFields_2">
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="original_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="original_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publisher_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="author_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="educational_alignment_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.identifier = input_row.identifier;&#xD;&#xA;output_row.original_json = input_row.original_json;&#xD;&#xA;output_row.resource_data_json = input_row.resource_data_json;&#xD;&#xA;&#xA;&#xA;globalMap.put(&quot;resource_data_json&quot;,input_row.resource_data_json);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="SaveResourceData"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_2">
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="original_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_2nvUYGiwEeaS6OmYRX3eCg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="MergeResourceDataBackToFlow"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out">
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="original_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publisher_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="author_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="educational_alignment_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out">
+        <mapperTableEntries name="identifier" expression="row11.identifier" type="id_String" nullable="true"/>
+        <mapperTableEntries name="original_json" expression="row11.original_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="resource_data_json" expression="row11.resource_data_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="publisher_json" expression="Resource_Data_LU.publisher_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="author_json" expression="Resource_Data_LU.author_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="educational_alignment_json" expression="Resource_Data_LU.educational_alignment_json" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row11" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="identifier" type="id_String" nullable="true"/>
+        <mapperTableEntries name="original_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="resource_data_json" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="Resource_Data_LU" activateCondensedTool="true" matchingMode="ALL_ROWS" lookupMode="RELOAD">
+        <mapperTableEntries name="publisher_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="author_json" type="id_String" nullable="true"/>
+        <mapperTableEntries name="educational_alignment_json" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:C8qIqKnQOXqG3BFHOIyHySPDlH2z5NBJLofFVOon" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;go_open_v1_staging&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="identifier"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="original_json"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="resource_data_json"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="publisher_json"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="author_json"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="educational_alignment_json"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="go_open_v1_staging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlOutput_1">
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="original_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publisher_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="author_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="educational_alignment_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="original_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="publisher_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="author_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="educational_alignment_json" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_3" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="resource_data_json"/>
+      <elementValue elementRef="VALUE" value="((String)globalMap.get(&quot;resource_data_json&quot;))"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="ResourceData"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_3">
+      <column comment="" key="false" length="-1" name="resource_data_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_3" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="resource_data_json"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/bills/bill/line&quot;" show="false"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="publisher_json"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="author_json"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="educational_alignment_json"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="publisher_json"/>
+      <elementValue elementRef="QUERY" value="&quot;@..publisher&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="author_json"/>
+      <elementValue elementRef="QUERY" value="&quot;@..author&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="educational_alignment_json"/>
+      <elementValue elementRef="QUERY" value="&quot;@..educationalAlignment&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_3" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="ExtractResourceData"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" value="false"/>
+    <metadata connector="FLOW" name="tExtractJSONFields_3">
+      <column comment="" key="false" length="-1" name="publisher_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="author_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="educational_alignment_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="publisher_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="author_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="educational_alignment_json" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="1376">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlCommit_3" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CHECK" name="CLOSE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlCommit_3"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="-224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="CoreLogs.infoMsg(&quot;Database connection successful: &quot; + context.db_learning_registry_staging_Server + &quot; / &quot; + context.db_learning_registry_staging_Database);&#xA;&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Logging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="1472">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_7" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//update recordCounter&#xA;int recordCounter=((Integer)globalMap.get(&quot;recordCounter&quot;));&#xA;&#xA;recordCounter += ((Integer)globalMap.get(&quot;tPostgresqlOutput_1_NB_LINE_INSERTED&quot;));&#xA;globalMap.put(&quot;recordCounter&quot;,recordCounter);&#xA;&#xA;&#xA;CoreLogs.infoMsg(&quot;Inserted : &quot; + ((Integer)globalMap.get(&quot;tPostgresqlOutput_1_NB_LINE_INSERTED&quot;)) + &quot; records...Total: &quot; + recordCounter);&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Logging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_7"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-64" posY="-416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="CoreInitializeLogging"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_D3eeUBEzEeWHWLgXkPZHLw"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="contextStr"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="contextStr"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="projectName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="projectName"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="jobName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="jobName"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_1"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="int batchCounter=0;&#xA;int recordCounter=0;&#xA;&#xA;globalMap.put(&quot;batchCounter&quot;,batchCounter);&#xA;globalMap.put(&quot;recordCounter&quot;,recordCounter);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="InitializeCounters"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_6"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_8" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="CoreLogs.infoMsg(&quot;Download complete&quot;);&#xA;CoreLogs.infoMsg(&quot;Downloaded &quot;+((Integer)globalMap.get(&quot;recordCounter&quot;))+&quot; records in &quot;+((Integer)globalMap.get(&quot;batchCounter&quot;))+&quot; batches.&quot;);&#xA;CoreLogs.infoMsg(&quot;Updated the 'last run time' value in the database to &quot; + ((String)globalMap.get(&quot;untilDateTime&quot;)));&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="Logging"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_8"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tPostgresqlConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tJavaRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="moment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="pid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="root_pid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="father_pid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="project"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="job"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="context"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="priority"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="type"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="origin"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="message"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tPostgresqlRollback_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tJavaRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tJava_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk9" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tJava_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_4" offsetLabelX="0" offsetLabelY="0" source="tJava_4" target="tJava_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_4" offsetLabelX="0" offsetLabelY="0" source="tJava_4" target="tFixedFlowInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tLoop_1" offsetLabelX="0" offsetLabelY="0" source="tLoop_1" target="tJava_5">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_5" offsetLabelX="0" offsetLabelY="0" source="tJava_5" target="tRESTClient_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="RESPONSE" label="row3" lineStyle="0" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_1" target="tJavaRow_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FAULT" label="row5" lineStyle="0" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTClient_1" target="tJavaRow_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="Failed" lineStyle="6" metaname="tJavaRow_5" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_5" target="tDie_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="((String)globalMap.get(&quot;status&quot;)).equalsIgnoreCase(&quot;FAILED&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Failed" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tExtractJSONFields_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tFixedFlowInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tJavaRow_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_4" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_4" target="tPostgresqlOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_4" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_4" target="tJava_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk13" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_2" target="tPostgresqlCommit_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tPostgresqlInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tJava_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tExtractJSONFields_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tExtractJSONFields_2" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_2" target="tJavaRow_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="author_json"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="publisher_json"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="educational_alignment_json"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tPostgresqlOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_1" target="tPostgresqlCommit_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFixedFlowInput_3" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_3" target="tExtractJSONFields_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="Resource_Data_LU" lineStyle="8" metaname="tExtractJSONFields_3" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_3" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Resource_Data_LU" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlCommit_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlCommit_3" target="tJava_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tJava_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_6" offsetLabelX="0" offsetLabelY="0" source="tJava_6" target="tLoop_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk12" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogCatcher_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Get last successful run start time"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLoop_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDie_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Extract resumption_token"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_4" show="false"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Update database with last run time"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlCommit_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRollback_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlCommit_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_7" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_8" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

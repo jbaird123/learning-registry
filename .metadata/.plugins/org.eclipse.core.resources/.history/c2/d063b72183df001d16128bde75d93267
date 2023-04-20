@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_mw7g4WpqEeaYPOCXqvKWxA" id="_mw7g4GpqEeaYPOCXqvKWxA" label="JsonUtils" creationDate="2016-08-24T22:21:18.190-0400" modificationDate="2016-09-08T07:36:52.790-0400" version="0.1" statusCode="" item="_mw7g42pqEeaYPOCXqvKWxA" displayName="JsonUtils">
+    <author href="../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_mw7g4mpqEeaYPOCXqvKWxA" path=""/>
+  <TalendProperties:RoutineItem xmi:id="_mw7g42pqEeaYPOCXqvKWxA" property="_mw7g4WpqEeaYPOCXqvKWxA" state="_mw7g4mpqEeaYPOCXqvKWxA">
+    <content href="JsonUtils_0.1.item#/"/>
+    <imports xmi:id="_Ps9ZgGprEeaYPOCXqvKWxA" mESSAGE="" mODULE="jackson-annotations-2.8.0.jar" nAME="JsonUtils" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-annotations-2.8.0.jar"/>
+    <imports xmi:id="_Q5RboGprEeaYPOCXqvKWxA" mESSAGE="" mODULE="jackson-core-2.8.1.jar" nAME="JsonUtils" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-core-2.8.1.jar"/>
+    <imports xmi:id="_SOOcYGprEeaYPOCXqvKWxA" mESSAGE="" mODULE="jackson-databind-2.8.1.jar" nAME="JsonUtils" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-databind-2.8.1.jar"/>
+    <imports xmi:id="_B4qC0GuBEea8aOPPcKtDMw" mESSAGE="" mODULE="commons-lang3-3.4.jar" nAME="JsonUtils" rEQUIRED="true" urlPath="C:\Talend\jars\commons-lang3-3.4.jar"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

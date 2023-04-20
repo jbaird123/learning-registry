@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_YpIBwQUsEd-xxMPzjK47rQ" id="_YpIBwAUsEd-xxMPzjK47rQ" label="CoreLogs" creationDate="2010-01-19T13:56:43.484-0500" modificationDate="2016-09-05T12:10:33.604-0400" version="0.1" statusCode="" item="_YpIBwwUsEd-xxMPzjK47rQ" displayName="CoreLogs">
+    <author href="../../../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_O8s0cmiuEeaVosv0LoDNZw" path="Core/Logging"/>
+  <TalendProperties:RoutineItem xmi:id="_YpIBwwUsEd-xxMPzjK47rQ" property="_YpIBwQUsEd-xxMPzjK47rQ" state="_O8s0cmiuEeaVosv0LoDNZw">
+    <content href="CoreLogs_0.1.item#/"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

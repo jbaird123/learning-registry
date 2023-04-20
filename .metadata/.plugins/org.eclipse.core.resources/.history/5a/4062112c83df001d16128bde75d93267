@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_Dg2cMWiuEeaVosv0LoDNZw" label="learning-registry" description="" language="java" technicalLabel="LEARNING_REGISTRY" local="true" author="_Dg2cMmiuEeaVosv0LoDNZw" productVersion="Talend Open Studio for ESB-7.3.1.20200219_1130" itemsRelationVersion="1.3">
+    <componentsSettings xmi:id="_0cbXEHYcEea2E6KiSf3t5A" name="DI|tHashOutput" family="Technical"/>
+    <componentsSettings xmi:id="_0cbXEXYcEea2E6KiSf3t5A" name="DI|tArrayIn" family="Technical"/>
+    <componentsSettings xmi:id="_0cbXEnYcEea2E6KiSf3t5A" name="DI|tHashInput" family="Technical"/>
+    <componentsSettings xmi:id="_0cbXE3YcEea2E6KiSf3t5A" name="DI|tArray" family="Technical"/>
+    <migrationTask xmi:id="_J-6TkN-DEe2PEJBzPRGAMg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_Dg2cMmiuEeaVosv0LoDNZw" login="user@talend.com" password="D41D8CD98F00B204E9800998ECF8427E"/>
+</xmi:XMI>

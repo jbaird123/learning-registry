@@ -1,0 +1,858 @@
+[ {
+  "baseItem" : {
+    "id" : "_2nvUYGiwEeaS6OmYRX3eCg",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_pd3FUGi2Eea4iY2rWyEOUg",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_D3eeUBEzEeWHWLgXkPZHLw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_GjTOoGiwEeaS6OmYRX3eCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "Author",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreProcessing",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DemoLRJSON",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DigitalSignature",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EducationalAlignment",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "ISO8601DateHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Identity",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItem",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItemContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Publisher",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "RegistryMetadata",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Rejects",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TOS",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "URL",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_D3eeUBEzEeWHWLgXkPZHLw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "AWCContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "AWCLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "AWCUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "ConsoleOutputCapturer",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EncryptionKey",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "FileEncryption",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringEncryption",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "testt",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_LM3HgGyREeazg6JDK0oi3A",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_pd3FUGi2Eea4iY2rWyEOUg",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_D3eeUBEzEeWHWLgXkPZHLw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_GjTOoGiwEeaS6OmYRX3eCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "Author",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreProcessing",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DemoLRJSON",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DigitalSignature",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EducationalAlignment",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "ISO8601DateHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Identity",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtils",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItem",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItemContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryResource",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Publisher",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "RegistryMetadata",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "RejectLogging",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Rejects",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TOS",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "URL",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Utils",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_LobPQArqEeWSFvnQnHLKvA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "AWCContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "AWCLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "AWCUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreProcessing",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DQTechnical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataQuality",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DqStringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EncryptionKey",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "FileEncryption",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "SQLike",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringEncryption",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "testt",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_M6f3wGpREeaYPOCXqvKWxA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_pd3FUGi2Eea4iY2rWyEOUg",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_D3eeUBEzEeWHWLgXkPZHLw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_GjTOoGiwEeaS6OmYRX3eCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "Author",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreProcessing",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DemoLRJSON",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DigitalSignature",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EducationalAlignment",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "ISO8601DateHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Identity",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtils",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItem",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItemContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryResource",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Publisher",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "RegistryMetadata",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Rejects",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TOS",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "URL",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Utils",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_UjU60G1FEeaeIMSWnM2ZVw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_pd3FUGi2Eea4iY2rWyEOUg",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_D3eeUBEzEeWHWLgXkPZHLw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_GjTOoGiwEeaS6OmYRX3eCg",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "Author",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreProcessing",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DemoLRJSON",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DigitalSignature",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EducationalAlignment",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "ISO8601DateHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Identity",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtils",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItem",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItemContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryResource",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Publisher",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "RegistryMetadata",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Rejects",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "SchemaValidation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "SchemaValidation2",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TOS",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "URL",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Utils",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_zqW7YHNzEeaE79VyNSES7A",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_pd3FUGi2Eea4iY2rWyEOUg",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_vVAGQKunEd6lK46AhMWhtw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "_2nvUYGiwEeaS6OmYRX3eCg",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_D3eeUBEzEeWHWLgXkPZHLw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_LM3HgGyREeazg6JDK0oi3A",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_LobPQArqEeWSFvnQnHLKvA",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_M6f3wGpREeaYPOCXqvKWxA",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "_UjU60G1FEeaeIMSWnM2ZVw",
+    "version" : "Latest",
+    "type" : "job"
+  }, {
+    "id" : "Author",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreLogs",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreProcessing",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "CoreUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataOperation",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DemoLRJSON",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DigitalSignature",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "EducationalAlignment",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "ISO8601DateHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Identity",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "JsonUtilities",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItem",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "LearningRegistryItemContext",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Numeric",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Publisher",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "RegistryMetadata",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Rejects",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "Relational",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "StringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TOS",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDataGenerator",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendDate",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "TalendString",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "URL",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+} ]

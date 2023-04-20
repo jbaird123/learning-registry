@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_m3sIYW1YEeaeIMSWnM2ZVw" id="_m3sIYG1YEeaeIMSWnM2ZVw" label="SchemaValidation" creationDate="2016-08-28T15:50:01.446-0400" modificationDate="2016-09-15T06:24:41.570-0400" version="0.1" statusCode="" item="_m3sIY21YEeaeIMSWnM2ZVw" displayName="SchemaValidation">
+    <author href="../../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_m3sIYm1YEeaeIMSWnM2ZVw" path="LearningRegistryV2"/>
+  <TalendProperties:RoutineItem xmi:id="_m3sIY21YEeaeIMSWnM2ZVw" property="_m3sIYW1YEeaeIMSWnM2ZVw" state="_m3sIYm1YEeaeIMSWnM2ZVw">
+    <content href="SchemaValidation_0.1.item#/"/>
+    <imports xmi:id="_AMP84G1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="btf-1.2.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\btf-1.2.jar"/>
+    <imports xmi:id="_CbXf0G1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="guava-16.0.1.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\guava-16.0.1.jar"/>
+    <imports xmi:id="_ESic0G1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="jackson-annotations-2.2.3.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-annotations-2.2.3.jar"/>
+    <imports xmi:id="_FuoAUG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="jackson-core-2.2.3.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-core-2.2.3.jar"/>
+    <imports xmi:id="_Ky810G1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="jackson-coreutils-1.8.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-coreutils-1.8.jar"/>
+    <imports xmi:id="_MUsVYG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="jackson-databind-2.2.3.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\jackson-databind-2.2.3.jar"/>
+    <imports xmi:id="_OLthYG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="jopt-simple-4.6.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\jopt-simple-4.6.jar"/>
+    <imports xmi:id="_Qq45kG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="json-schema-core-1.2.5.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\json-schema-core-1.2.5.jar"/>
+    <imports xmi:id="_SrITAG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="json-schema-validator-2.2.6.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\json-schema-validator-2.2.6.jar"/>
+    <imports xmi:id="_UpSo0G1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="jsr305-3.0.0.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\jsr305-3.0.0.jar"/>
+    <imports xmi:id="_WU2ywG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="mailapi-1.4.3.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\mailapi-1.4.3.jar"/>
+    <imports xmi:id="_XtEi4G1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="msg-simple-1.1.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\msg-simple-1.1.jar"/>
+    <imports xmi:id="_ZLPxEG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="rhino-1.7R4.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\rhino-1.7R4.jar"/>
+    <imports xmi:id="_acevcG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="uri-template-0.9.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\uri-template-0.9.jar"/>
+    <imports xmi:id="_0RxScG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="libphonenumber-6.2.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\libphonenumber-6.2.jar"/>
+    <imports xmi:id="_1maxMG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="joda-time-2.3.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\joda-time-2.3.jar"/>
+    <imports xmi:id="_8znXsG1ZEeaeIMSWnM2ZVw" mESSAGE="" mODULE="activation-1.1.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\activation-1.1.jar"/>
+    <imports xmi:id="_vEMk4G1aEeaeIMSWnM2ZVw" mESSAGE="" mODULE="json-schema-validation.jar" nAME="SchemaValidation" rEQUIRED="true" urlPath="C:\Talend\jars\json-schema-validation.jar"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

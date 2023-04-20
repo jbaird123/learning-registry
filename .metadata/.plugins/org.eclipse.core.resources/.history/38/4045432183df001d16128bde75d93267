@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="_XpeGMVDKEeG53OpvTfJl5A" id="_XpeGMFDKEeG53OpvTfJl5A" label="CoreProcessing" creationDate="2012-02-06T08:56:29.843-0500" modificationDate="2016-05-28T11:28:25.410-0400" version="0.1" statusCode="" item="_XpeGM1DKEeG53OpvTfJl5A" displayName="CoreProcessing">
+    <author href="../../../talend.project#_Dg2cMmiuEeaVosv0LoDNZw"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="_O8jDcGiuEeaVosv0LoDNZw" path="Core"/>
+  <TalendProperties:RoutineItem xmi:id="_XpeGM1DKEeG53OpvTfJl5A" property="_XpeGMVDKEeG53OpvTfJl5A" state="_O8jDcGiuEeaVosv0LoDNZw">
+    <content href="CoreProcessing_0.1.item#/"/>
+  </TalendProperties:RoutineItem>
+</xmi:XMI>

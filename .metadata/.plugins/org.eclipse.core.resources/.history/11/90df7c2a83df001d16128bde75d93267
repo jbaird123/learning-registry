@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="" name="logMessage" prompt="logMessage?" promptNeeded="false" type="id_String" value="&lt;BR>"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="c:/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" type="id_String" value="Devl"/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="Job Conductor Label" name="taskLabel" prompt="taskLabel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Y=No Files" name="noFilesFlag" prompt="noFilesFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="contextDirectory" prompt="contextDirectory?" promptNeeded="false" type="id_String" value="/w525/talend/config/context"/>
+    <contextParameter comment="" name="programName" prompt="programName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="D=Database, F=File system" name="contextSource" prompt="contextSource?" promptNeeded="false" type="id_String" value="D"/>
+    <contextParameter comment="N=No Rejects Encountered, Y=Rejects Encountered" name="rejectFlag" prompt="rejectFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="ofVmsfRA8aYcLAftRkqc5A=="/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for the log files" name="logDirectory" prompt="logDirectory?" promptNeeded="false" type="id_String" value="c:/talend/logs"/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="CONSOLE"/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="C:/learning_registry/go_open"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+  </context>
+  <context confirmationNeeded="false" name="Test">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="" name="logMessage" prompt="logMessage?" promptNeeded="false" type="id_String" value="&lt;BR>"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="c:/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" type="id_String" value="Dev"/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="Job Conductor Label" name="taskLabel" prompt="taskLabel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Y=No Files" name="noFilesFlag" prompt="noFilesFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="contextDirectory" prompt="contextDirectory?" promptNeeded="false" type="id_String" value="/w525/talend/config/context"/>
+    <contextParameter comment="" name="programName" prompt="programName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="D=Database, F=File system" name="contextSource" prompt="contextSource?" promptNeeded="false" type="id_String" value="F"/>
+    <contextParameter comment="N=No Rejects Encountered, Y=Rejects Encountered" name="rejectFlag" prompt="rejectFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="ofVmsfRA8aYcLAftRkqc5A=="/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for the log files" name="logDirectory" prompt="logDirectory?" promptNeeded="false" type="id_String" value="c:/talend/logs"/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FILE"/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="C:/learning_registry/go_open"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+  </context>
+  <context confirmationNeeded="false" name="Dev">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT FROM THE DEV ENVIRONMENT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="" name="logMessage" prompt="logMessage?" promptNeeded="false" type="id_String" value="&lt;BR>"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="c:/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" type="id_String" value="Devl"/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="Job Conductor Label" name="taskLabel" prompt="taskLabel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Y=No Files" name="noFilesFlag" prompt="noFilesFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="contextDirectory" prompt="contextDirectory?" promptNeeded="false" type="id_String" value="/w525/talend/config/context"/>
+    <contextParameter comment="" name="programName" prompt="programName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="D=Database, F=File system" name="contextSource" prompt="contextSource?" promptNeeded="false" type="id_String" value="F"/>
+    <contextParameter comment="N=No Rejects Encountered, Y=Rejects Encountered" name="rejectFlag" prompt="rejectFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="ofVmsfRA8aYcLAftRkqc5A=="/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for the log files" name="logDirectory" prompt="logDirectory?" promptNeeded="false" type="id_String" value="c:/talend/logs"/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FILE"/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="C:/learning_registry/go_open"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+  </context>
+  <context confirmationNeeded="false" name="Prod">
+    <contextParameter comment="Email Server" name="emailHost" prompt="emailHost?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="mail.geekisp.com"/>
+    <contextParameter comment="SMTP Port" name="emailPort" prompt="emailPort?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="465"/>
+    <contextParameter comment="&quot;From&quot; address to be used in email notifications" name="emailFromAddr" prompt="emailFromAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="&quot;To&quot; address to be used in email notifications" name="emailToAddr" prompt="emailToAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="jbaird123@gmail.com"/>
+    <contextParameter comment="HTML message to be included at the top of all emails" name="emailHeaderMsg" prompt="emailHeaderMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;b>*** THIS IS AN AUTO NOTIFICATION ALERT ***&lt;/b>&lt;BR>&lt;BR>"/>
+    <contextParameter comment="HTML message to be included at the bottom of all emails" name="emailFooterMsg" prompt="emailFooterMsg?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="&lt;BR>&lt;BR>&lt;b>You are receiving this auto notification alert because a notification alert has been enabled for you. If this alert is incorrect, or to unsubscribe from this auto notification alert, please contact the system administrator.&lt;/b>"/>
+    <contextParameter comment="Determines the logging level" name="logLevel" prompt="logLevel?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="INFO"/>
+    <contextParameter comment="" name="logMessage" prompt="logMessage?" promptNeeded="false" type="id_String" value="&lt;BR>"/>
+    <contextParameter comment="&quot;BCC&quot; address for all emails" name="emailBCCAddr" prompt="emailBCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for temporary file processing" name="tempDirectory" prompt="tempDirectory?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="/opt/talend/talendtemp"/>
+    <contextParameter comment="&quot;CC&quot; address for all emails" name="emailCCAddr" prompt="emailCCAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="environment" prompt="environment?" promptNeeded="false" type="id_String" value="Prod"/>
+    <contextParameter comment="Email subject message for successful executions" name="statusMessageSuccess" prompt="statusMessageSuccess?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="run successful"/>
+    <contextParameter comment="Email subject message for failed executions" name="statusMessageFail" prompt="statusMessageFail?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FAILED"/>
+    <contextParameter comment="Email subject message for emails containing reject data" name="statusMessageRejects" prompt="statusMessageRejects?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="Rejects"/>
+    <contextParameter comment="Email subject message for executions which found no files to process" name="statusMessageNoFiles" prompt="statusMessageNoFiles?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="NO FILES"/>
+    <contextParameter comment="Job Conductor Label" name="taskLabel" prompt="taskLabel?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="SUCCESS or FAILED" name="jobStatus" prompt="jobStatus?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Y=No Files" name="noFilesFlag" prompt="noFilesFlag?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="contextDirectory" prompt="contextDirectory?" promptNeeded="false" type="id_String" value="/w520/talend/config/context"/>
+    <contextParameter comment="" name="programName" prompt="programName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="D=Database, F=File system" name="contextSource" prompt="contextSource?" promptNeeded="false" type="id_String" value="F"/>
+    <contextParameter comment="N=No Rejects Encountered, Y=Rejects Encountered" name="rejectFlag" prompt="rejectFlag?" promptNeeded="false" type="id_String" value="N"/>
+    <contextParameter comment="" name="contextStr" prompt="contextStr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="jobName" prompt="jobName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="" name="projectName" prompt="projectName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Password for the SMTP server" name="emailPwd" prompt="emailPwd?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_Password" value="ofVmsfRA8aYcLAftRkqc5A=="/>
+    <contextParameter comment="Email address to send failure notices to" name="emailFailureAddr" prompt="emailFailureAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Email address to send success notices to" name="emailSuccessAddr" prompt="emailSuccessAddr?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value=""/>
+    <contextParameter comment="Directory for the log files" name="logDirectory" prompt="logDirectory?" promptNeeded="false" type="id_String" value="c:/talendlogs"/>
+    <contextParameter comment="Determines where to output logging information" name="logDestination" prompt="logDestination?" promptNeeded="true" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="FILE"/>
+    <contextParameter comment="User ID for logging on to the SMTP server" name="emailUser" prompt="emailUser?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="lr-transfer@learningtapestry.com"/>
+    <contextParameter comment="" name="rootDirectory" prompt="rootDirectory?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="/opt/talend/jobs/go_open_v1_v2"/>
+    <contextParameter comment="" name="errorLogFileName" prompt="errorLogFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="error.log"/>
+    <contextParameter comment="" name="logFileName" prompt="logFileName?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="log.log"/>
+    <contextParameter comment="Determines whether to send emails on job success" name="sendSuccessEmailFlag" prompt="sendSuccessEmailFlag?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="N"/>
+    <contextParameter comment="" name="folderLogFile" prompt="folderLogFile?" promptNeeded="false" repositoryContextId="_vVAGQKunEd6lK46AhMWhtw" type="id_String" value="logs"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Talend/TOS_DI-20160704_1411-V6.2.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_sb9gQAlJEeWNGK7Uf31GuQ" name="DQTechnical"/>
+    <routinesParameter id="_sXKf0AlJEeWNGK7Uf31GuQ" name="DataOperation"/>
+    <routinesParameter id="_sa-BwAlJEeWNGK7Uf31GuQ" name="DataQuality"/>
+    <routinesParameter id="_sbe_IAlJEeWNGK7Uf31GuQ" name="DqStringHandling"/>
+    <routinesParameter id="_sYhxwAlJEeWNGK7Uf31GuQ" name="Mathematical"/>
+    <routinesParameter id="_sY_r0AlJEeWNGK7Uf31GuQ" name="Numeric"/>
+    <routinesParameter id="_sZPjcAlJEeWNGK7Uf31GuQ" name="Relational"/>
+    <routinesParameter id="_sazpsAlJEeWNGK7Uf31GuQ" name="SQLike"/>
+    <routinesParameter id="_sZbJoAlJEeWNGK7Uf31GuQ" name="StringHandling"/>
+    <routinesParameter id="_sZ5qwAlJEeWNGK7Uf31GuQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_saZaAAlJEeWNGK7Uf31GuQ" name="TalendDate"/>
+    <routinesParameter id="_saoDgAlJEeWNGK7Uf31GuQ" name="TalendString"/>
+    <routinesParameter id="_YpIBwAUsEd-xxMPzjK47rQ" name="AWCLogs"/>
+    <routinesParameter id="_NtPHEAojEeWKhfIkBgo3Dg" name="testt"/>
+    <routinesParameter id="_XpeGMFDKEeG53OpvTfJl5A" name="AWCContext"/>
+    <routinesParameter id="_Kt5DAGFREeGRqL7QZXDUXw" name="AWCUtilities"/>
+    <routinesParameter id="_FITxoB-3EeOSGbVuOT0r-w" name="EncryptionKey"/>
+    <routinesParameter id="_RfMpwE5XEeCT4Ji7iUdbFQ" name="FileEncryption"/>
+    <routinesParameter id="_-2h-UHFeEeKBPLnClLgNMw" name="StringEncryption"/>
+    <routinesParameter id="_YpIBwAUsEd-xxMPzjK47rQ" name="CoreLogs"/>
+    <routinesParameter id="_XpeGMFDKEeG53OpvTfJl5A" name="CoreContext"/>
+    <routinesParameter id="_XpeGMFDKEeG53OpvTfJl5A" name="CoreProcessing"/>
+  </parameters>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String emailSubject;&#xA;&#xA;//BCC for production - ensure emails always get sent to Sys Admin&#xA;if (context.environment.equalsIgnoreCase(&quot;Prod&quot;)) {&#xA;&#x9;if ((context.emailBCCAddr==null) || (context.emailBCCAddr.equals(&quot;&quot;))) {&#xA;&#x9;&#x9;context.emailBCCAddr = &quot;&quot;; //hard code address if needed&#xA;&#x9;} else {&#xA;&#x9;&#x9;context.emailBCCAddr += &quot;&quot;; //hard code address if needed&#xA;&#x9;}&#xA;}&#xA;&#xA;//Set subject line&#xA;emailSubject = context.environment+&quot;: (&quot;+ CoreLogs.getExecutionServer() +&quot;) &quot; +context.projectName +&quot; / Job: &quot;+context.jobName;&#xA;&#xA;&#xA;//Set subject line - success or failure&#xA;if(context.jobStatus.equalsIgnoreCase(CoreProcessing.getJobStatusFailCode()))&#xA;{&#xA;   emailSubject += &quot; - &quot;+context.statusMessageFail;&#xA;}&#xA;if(context.jobStatus.equalsIgnoreCase(CoreProcessing.getJobStatusSuccessCode()))&#xA;{&#xA;   emailSubject += &quot; - &quot;+context.statusMessageSuccess;&#xA;}&#xA;&#xA;//Set subject line - no files&#xA;if(context.noFilesFlag.equalsIgnoreCase(&quot;Y&quot;))&#xA;{&#xA;   emailSubject += &quot; - &quot;+context.statusMessageNoFiles;&#xA;   CoreLogs.infoMsg(&quot;There are no files to load.&quot;);&#xA;}&#xA;&#xA;//Set subject line - rejects&#xA;if(context.rejectFlag.equalsIgnoreCase(&quot;Y&quot;))&#xA;{&#xA;   emailSubject += &quot; - &quot;+context.statusMessageRejects;&#xA;}&#xA;globalMap.put(&quot;emailSubject&quot;,emailSubject);&#xA;&#xA;CoreLogs.infoMsg(&quot;Job Status: &quot; + context.jobStatus);&#xA;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_1" show="false"/>
+    <elementParameter field="TEXT" name="TO" value="context.emailToAddr"/>
+    <elementParameter field="TEXT" name="FROM" value="context.emailFromAddr"/>
+    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
+    <elementParameter field="TEXT" name="PERSONAL_NAME" value="&quot;sender&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CC" value="context.emailCCAddr"/>
+    <elementParameter field="TEXT" name="BCC" value="context.emailBCCAddr"/>
+    <elementParameter field="TEXT" name="SUBJECT" value="((String)globalMap.get(&quot;emailSubject&quot;))"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="context.emailHeaderMsg+ CoreLogs.getLogFileContents()+context.emailFooterMsg"/>
+    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
+    <elementParameter field="TABLE" name="ATTACHMENTS"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="context.emailHost"/>
+    <elementParameter field="TEXT" name="SMTP_PORT" value="context.emailPort"/>
+    <elementParameter field="CHECK" name="SSL" value="true"/>
+    <elementParameter field="CHECK" name="STARTTLS" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.emailUser"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kudaoy7eIojAeE7zYSRIQ6r4"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="html"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
+    <elementParameter field="TEXT" name="LOCALHOST" value="&quot;localhost&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EmailSuccess"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSendMail_1">
+      <column comment="" key="false" length="-1" name="statusMessage" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="noOfFiles" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSendMail" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_2" show="false"/>
+    <elementParameter field="TEXT" name="TO" value="context.emailToAddr"/>
+    <elementParameter field="TEXT" name="FROM" value="context.emailFromAddr"/>
+    <elementParameter field="CHECK" name="NEED_PERSONAL_NAME" value="false"/>
+    <elementParameter field="TEXT" name="PERSONAL_NAME" value="&quot;sender&quot;" show="false"/>
+    <elementParameter field="TEXT" name="CC" value="context.emailCCAddr"/>
+    <elementParameter field="TEXT" name="BCC" value="context.emailBCCAddr"/>
+    <elementParameter field="TEXT" name="SUBJECT" value="((String)globalMap.get(&quot;emailSubject&quot;))"/>
+    <elementParameter field="MEMO_MESSAGE" name="MESSAGE" value="context.emailHeaderMsg+ CoreLogs.getLogFileContents()+context.emailFooterMsg"/>
+    <elementParameter field="CHECK" name="CHECK_ATTACHMENT" value="true"/>
+    <elementParameter field="TABLE" name="ATTACHMENTS"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TEXT" name="SMTP_HOST" value="context.emailHost"/>
+    <elementParameter field="TEXT" name="SMTP_PORT" value="context.emailPort"/>
+    <elementParameter field="CHECK" name="SSL" value="true"/>
+    <elementParameter field="CHECK" name="STARTTLS" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="High"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.emailUser"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kudaoy7eIojAeE7zYSRIQ6r4"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="html"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SET_LOCALHOST" value="false"/>
+    <elementParameter field="TEXT" name="LOCALHOST" value="&quot;localhost&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="EmailFailure"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSendMail_2">
+      <column comment="" key="false" length="-1" name="statusMessage" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="noOfFiles" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="if (context.sendSuccessEmailFlag.equalsIgnoreCase(&quot;Y&quot;)) {&#xA;&#x9;CoreLogs.infoMsg(&quot;Emailing: &quot; + context.emailToAddr);&#xA;} else {&#xA;&#x9;CoreLogs.infoMsg(&quot;sendSuccessEmailFlag=&quot; + context.sendSuccessEmailFlag + &quot; no email will be sent.&quot;);&#xA;}"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="CoreLogs.infoMsg(&quot;Emailing: &quot; + context.emailToAddr);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_3"/>
+  </node>
+  <connection connectorName="RUN_IF" label="Success" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tJava_1" target="tJava_2">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(context.jobStatus.equalsIgnoreCase(CoreProcessing.getJobStatusSuccessCode()))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Success" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="Failure" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tJava_1" target="tJava_3">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="!(context.jobStatus.equalsIgnoreCase(CoreProcessing.getJobStatusSuccessCode()))"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="Failure" show="false"/>
+  </connection>
+  <connection connectorName="RUN_IF" label="sendSuccessEmailFlag_Y" lineStyle="6" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tSendMail_1">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.sendSuccessEmailFlag.equalsIgnoreCase(&quot;Y&quot;)"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sendSuccessEmailFlag_Y" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJava_3" offsetLabelX="0" offsetLabelY="0" source="tJava_3" target="tSendMail_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSendMail_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>
